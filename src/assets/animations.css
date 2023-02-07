@@ -1,0 +1,18 @@
+@keyframes cubes {
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 1;
+		border-radius: 5%;
+		background-color: rgba(199, 65, 65, 0.2);
+	}
+	80% {
+		border-radius: 50%;
+		background-color: rgba(65, 99, 199, 0.2);
+	}
+	100% {
+		transform: translateY(-1000px) rotate(720deg);
+		opacity: 0;
+		border-radius: 100%;
+		background-color: rgba(65, 99, 199, 0.2);
+	}
+}

@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "CommonJS",
+    "outDir": "dist",
+    "noEmit": false
+  },
+  "include": [
+    "server/index.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

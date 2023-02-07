@@ -1,0 +1,44 @@
+{
+  "name": "nikolasdev",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "NODE_ENV=development ts-node --project tsconfig.server.json server/index.ts",
+    "build": "next build && tsc --project tsconfig.server.json",
+    "start": "yarn build && NODE_ENV=production node dist/index.js && next build",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@next/font": "^13.1.6",
+    "@szhsin/react-menu": "^3.4.1",
+    "@tippyjs/react": "^4.2.6",
+    "animated-scroll-to": "^2.3.0",
+    "body-parser": "^1.20.1",
+    "classnames": "^2.3.2",
+    "express": "^4.18.2",
+    "next": "^13.1.6",
+    "nodemailer": "^6.9.1",
+    "public-ip": "^6.0.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hot-toast": "^2.4.0",
+    "react-masonry-css": "^1.0.16",
+    "react-responsive": "^9.0.2",
+    "sharp": "^0.31.3",
+    "socket.io": "^4.5.4",
+    "socket.io-client": "^4.5.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.11.19",
+    "@types/nodemailer": "^6.4.7",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.4",
+    "three-orbitcontrols-ts": "^0.1.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  }
+}
