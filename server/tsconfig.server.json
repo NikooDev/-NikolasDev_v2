@@ -4,13 +4,13 @@
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "module": "CommonJS",
-    "outDir": "dist",
+    "outDir": "./dist",
     "noEmit": false
   },
   "include": [
-    "server/index.ts"
+    "server.ts"
   ],
   "exclude": [
-    "node_modules"
+    "../node_modules"
   ]
 }

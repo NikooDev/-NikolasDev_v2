@@ -4,7 +4,7 @@ export default function Document() {
 	return (
 		<Html lang="fr">
 			<Head>
-				<script defer type="text/javascript" src="/static/js/noFlash.js" />
+				<script type="text/javascript" src="/static/js/noFlash.js" />
 			</Head>
 			<body>
 			  <Main/>
