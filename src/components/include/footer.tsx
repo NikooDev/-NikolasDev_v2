@@ -1,35 +1,10 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React from 'react'
 import Tippy from '@tippyjs/react'
-import Ws from '@App/services/socket'
-import { publicIpv4 } from 'public-ip'
 import Container from '@App/components/layout/container'
+import useStat from '@App/hooks/useStat'
 
 const Footer = () => {
-	const { current: socket } = React.useRef(Ws)
-	const [countLike, setCountLike] = useState<number>()
-	const [countVues, setCountVues] = useState<number>()
-
-	const handleLike = async (event: React.MouseEvent) => {
-		event.preventDefault()
-
-		const publicIP = await publicIpv4()
-		socket.emit('like', publicIP)
-	}
-
-	useEffect(() => {
-		socket.emit('vue')
-	}, [socket])
-
-	const handleSocketEvents = useCallback(() => {
-		socket.on('count', (count) => {
-			setCountLike(count)
-		})
-		socket.on('vue', (vue) => {
-			setCountVues(vue)
-		})
-	}, [socket])
-
-	useEffect(() => handleSocketEvents(), [handleSocketEvents])
+	const { handleLike, countLike, countVues } = useStat()
 
 	return (
 		<footer className="relative pb-10" role="contentinfo">

@@ -44,6 +44,23 @@ input, textarea {
 	top: 120px !important;
 	right: 30px !important;
 }
+.rect {
+	top: 0;
+	transform: translateX(100%);
+	transition: transform .5s ease-in-out, top .5s ease-in-out;
+}
+.rect-loader {
+	transform: translateX(0);
+}
+@media screen and (max-width: 899px) {
+	.rect-noTop {
+		top: 4.15rem;
+	}
+	.rect-top {
+		top: 0;
+	}
+}
+
 
 /* Intro */
 .title {
@@ -234,6 +251,10 @@ input, textarea {
 	background-color: #fff;
 }
 .heart-clip:hover::before {
+	opacity: 1;
+	transform: scale(1);
+}
+.heart-container:hover .heart-clip::before {
 	opacity: 1;
 	transform: scale(1);
 }

@@ -1,12 +1,50 @@
-import React from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { Toaster } from 'react-hot-toast'
 import ILayout from '@App/types/layout'
 import { ThemeProvider } from '@App/contexts/theme.context'
+import useStat from '@App/hooks/useStat'
 import Head from 'next/head'
 import Header from '@App/components/include/header'
 import Cubes from '@App/components/layout/cubes'
+import Stats from '@App/components/include/stats'
+import Class from 'classnames'
 
 const Layout: React.FC<ILayout> = ({ children }) => {
+	const { socket } = useStat()
+	const [isLoaded, setIsLoaded] = useState<boolean>(true)
+	const [isTop, setIsTop] = useState<boolean>(true)
+
+	useEffect(() => {
+		socket.emit('vue')
+	}, [socket])
+
+	const handleShowRect = useCallback(() => {
+		if (window.scrollY > 3650 && window.scrollY < 7300 || window.scrollY < 650) {
+			setIsLoaded(true)
+		} else {
+			setIsLoaded(false)
+		}
+		if (window.scrollY > 850) {
+			setIsTop(false)
+		} else {
+			setIsTop(true)
+		}
+		console.log(window.scrollY)
+	}, [])
+
+	useEffect(() => {
+		window.addEventListener('scroll', () => {
+			handleShowRect()
+		})
+		window.addEventListener('resize', () => {
+			handleShowRect()
+		})
+	}, [handleShowRect])
+
+	useEffect(() => {
+		setTimeout(() => setIsLoaded(true), 500)
+	}, [])
+
 	return (
 		<ThemeProvider>
 			<Head>
@@ -17,9 +55,10 @@ const Layout: React.FC<ILayout> = ({ children }) => {
 			<Header/>
 			<main role="main">
 				<Cubes/>
-				<img src="/static/rect.svg" height="100%" width="100%" className="absolute right-0 -z-10 w-[40%] top-0" alt="cubes"/>
+				<img src="/static/rect.svg" height="100%" width="40%" className={Class('fixed right-0 -z-10 w-[40%] rect', isLoaded && 'rect-loader', isTop ? 'rect-top' : 'rect-noTop')} alt="rectangle"/>
 				{ children }
 			</main>
+			<Stats/>
 		</ThemeProvider>
 	)
 }
