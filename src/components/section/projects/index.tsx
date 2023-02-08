@@ -19,7 +19,7 @@ const Projects = () => {
 					<div className={card}>
 						<div className="relative min-h-[302.41px]">
 							<span className="absolute -top-3.5 left-6 text-sm text-white font-semibold py-1 px-3 z-[40] rounded-3xl bg-gradient-to-tr from-[#6a98ef] to-[#4961db]">Développement en cours</span>
-							<Image src={'/static/projects/wakychat.jpg'} blurDataURL={'/static/projects/wakychat.jpg'} fill placeholder="blur" className="relative rounded-t-2xl object-cover" alt="wakychat" />
+							<Image src="/static/projects/wakychat.jpg" blurDataURL="/static/projects/wakychat.jpg" placeholder="blur" sizes="100%, 100%" fill className="rounded-t-2xl object-cover" alt="wakychat" />
 						</div>
 						<div className="relative z-30 p-4 bg-white dark:bg-[#212529] rounded-b-2xl">
 							<p className="text-lg font-semibold">WakyChat</p>
@@ -66,7 +66,7 @@ const Projects = () => {
 					</div>
 					<div className={card}>
 						<div className="relative min-h-[302.41px]">
-							<Image src={'/static/projects/portfolio.jpg'} blurDataURL={'/static/projects/portfolio.jpg'} fill placeholder="blur" className="relative rounded-t-2xl object-cover" alt="portfolio" />
+							<Image src="/static/projects/portfolio.jpg" blurDataURL="/static/projects/portfolio.jpg" fill placeholder="blur" sizes="100%, 100%" className="relative rounded-t-2xl object-cover" alt="portfolio" />
 						</div>
 						<div className="relative z-30 p-4 bg-white dark:bg-[#212529] rounded-b-2xl">
 							<p className="text-lg font-semibold">Portfolio NikolasDev.com</p>
@@ -105,7 +105,7 @@ const Projects = () => {
 					</div>
 					<div className={card}>
 						<div className="relative min-h-[302.41px]">
-							<Image src={'/static/projects/groupomania.jpg'} blurDataURL={'/static/projects/groupomania.jpg'} fill placeholder="blur" className="relative rounded-t-2xl object-cover" alt="groupomania" />
+							<Image src="/static/projects/groupomania.jpg" blurDataURL="/static/projects/groupomania.jpg" fill placeholder="blur" sizes="100%, 100%" className="relative rounded-t-2xl object-cover" alt="groupomania" />
 						</div>
 						<div className="relative z-30 p-4 bg-white dark:bg-[#212529] rounded-b-2xl">
 							<p className="text-lg font-semibold">Réseau social</p>
@@ -145,7 +145,7 @@ const Projects = () => {
 					</div>
 					<div className={card}>
 						<div className="relative min-h-[302.41px]">
-							<Image src={'/static/projects/kanap.jpg'} blurDataURL={'/static/projects/kanap.jpg'} fill placeholder="blur" className="relative rounded-t-2xl object-cover" alt="kanap" />
+							<Image src="/static/projects/kanap.jpg" blurDataURL="/static/projects/kanap.jpg" fill placeholder="blur" sizes="100%, 100%" className="relative rounded-t-2xl object-cover" alt="kanap" />
 						</div>
 						<div className="relative z-30 p-4 bg-white dark:bg-[#212529] rounded-b-2xl">
 							<p className="text-lg font-semibold">E-commerce</p>
@@ -185,7 +185,7 @@ const Projects = () => {
 					</div>
 					<div className={card}>
 						<div className="relative min-h-[302.41px]">
-							<Image src={'/static/projects/ohmyfood.jpg'} blurDataURL={'/static/projects/ohmyfood.jpg'} fill placeholder="blur" className="relative rounded-t-2xl object-cover" alt="ohmyfood" />
+							<Image src="/static/projects/ohmyfood.jpg" blurDataURL="/static/projects/ohmyfood.jpg" fill placeholder="blur" sizes="100%, 100%" className="relative rounded-t-2xl object-cover" alt="ohmyfood" />
 						</div>
 						<div className="relative z-30 p-4 bg-white dark:bg-[#212529] rounded-b-2xl">
 							<p className="text-lg font-semibold">Intégration web</p>
@@ -218,7 +218,7 @@ const Projects = () => {
 					</div>
 					<div className={card}>
 						<div className="relative min-h-[302.41px]">
-							<Image src={'/static/projects/agence.jpg'} blurDataURL={'/static/projects/agence.jpg'} fill placeholder="blur" className="relative rounded-t-2xl object-cover" alt="agence" />
+							<Image src="/static/projects/agence.jpg" blurDataURL="/static/projects/agence.jpg" fill placeholder="blur" sizes="100%, 100%" className="relative rounded-t-2xl object-cover" alt="agence" />
 						</div>
 						<div className="relative z-30 p-4 bg-white dark:bg-[#212529] rounded-b-2xl">
 							<p className="text-lg font-semibold">Optimisation SEO</p>
@@ -244,7 +244,7 @@ const Projects = () => {
 					</div>
 					<div className={card}>
 						<div className="relative min-h-[302.41px]">
-							<Image src={'/static/projects/booki.jpg'} blurDataURL={'/static/projects/booki.jpg'} fill placeholder="blur" className="relative rounded-t-2xl object-cover" alt="booki" />
+							<Image src="/static/projects/booki.jpg" blurDataURL="/static/projects/booki.jpg" fill placeholder="blur" sizes="100%, 100%" className="relative rounded-t-2xl object-cover" alt="booki" />
 						</div>
 						<div className="relative z-30 p-4 bg-white dark:bg-[#212529] rounded-b-2xl">
 							<p className="text-lg font-semibold">Site vitrine</p>
