@@ -1,7 +1,7 @@
 import io from 'socket.io-client'
 
 const wsOptions = {
-	url: 'http://127.0.0.1:3333/',
+	url: 'http://socket.nikolasdev.com',
 	config: {
 		path: '/ws',
 		autoConnect: true,
