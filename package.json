@@ -3,9 +3,10 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "dev": "NODE_ENV=development ts-node --project tsconfig.server.json server/index.ts",
+    "dev": "NODE_ENV=development next dev",
     "build": "next build && tsc --project tsconfig.server.json",
-    "start": "yarn build && NODE_ENV=production node dist/index.js && next build",
+    "start": "NODE_ENV=production next start",
+    "server": "node dist/index.js",
     "lint": "next lint"
   },
   "dependencies": {
