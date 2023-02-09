@@ -64,7 +64,7 @@ input, textarea {
 
 /* Intro */
 .title {
-	font-size: calc(1.475rem + 3.7vw);
+	font-size: calc(1.475rem + 3vw);
 }
 .cubes span {
 	background-color: rgba(199, 65, 65, 0.2);
@@ -232,10 +232,10 @@ input, textarea {
 }
 
 /* Footer */
-.heart-clip {
+.heart-clip, .hearts-clip {
 	clip-path: url(#svgPath);
 }
-.heart-clip::before {
+.heart-clip::before, .hearts-clip::before {
 	content: "";
 	display: block;
 	width: 100%;
@@ -246,6 +246,11 @@ input, textarea {
 	transform: scale(0);
 	transition: transform 0.2s linear, opacity 0.2s linear;
 	transform-origin: center 60%;
+}
+.hearts-clip::before {
+	background-color: #fff;
+	transform: scale(1);
+	opacity: 1;
 }
 .dark .heart-clip::before {
 	background-color: #fff;
@@ -261,4 +266,23 @@ input, textarea {
 .heart-wrapper:hover .heart-clip::before {
 	opacity: 1;
 	transform: scale(1);
+}
+.heart-anim .heart-1 {
+	animation: heart-show 1s ease-in-out .2s;
+	animation-iteration-count: 2;
+}
+.heart-anim .heart-2 {
+	animation: heart-show 1s ease-in-out;
+	animation-iteration-count: 2;
+}
+@keyframes heart-show {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 100%;
+	}
+	100% {
+		opacity: 0;
+	}
 }

@@ -29,7 +29,6 @@ const Layout: React.FC<ILayout> = ({ children }) => {
 		} else {
 			setIsTop(true)
 		}
-		console.log(window.scrollY)
 	}, [])
 
 	useEffect(() => {

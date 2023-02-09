@@ -21,9 +21,10 @@ io.on('connection', (socket: Socket) => {
 	io.emit('count', like.length)
 	io.emit('vue', vues)
 	socket.on('like', (ip: string) => {
-		if (!like.includes(ip)) {
-			like.push(ip)
-		}
+		if (like.includes(ip)) return
+
+		like.push(ip)
+		io.emit('animLike')
 		io.emit('count', like.length)
 	})
 	socket.on('vue', () => {
