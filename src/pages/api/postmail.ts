@@ -7,7 +7,6 @@ const capitalize = (value: string) => {
 
 const Postmail = (req: NextApiRequest, res: NextApiResponse) => {
 	if (req.body) {
-
 		if (!req.body.name || !req.body.firstname || !req.body.from || !req.body.content) {
 			return res.json({ type: 'error', message: 'LE FORMULAIRE EST INCOMPLET' })
 		}
@@ -17,8 +16,8 @@ const Postmail = (req: NextApiRequest, res: NextApiResponse) => {
 			host: 'smtp.gmail.com',
 			auth: {
 				user: 'nikola.tual@gmail.com',
-				pass: 'geutwujodmhidovc',
-			}
+				pass: 'elxswteqdwytgeug',
+			},
 		})
 
 		const content = req.body.content.replace(/\n/g,'<br/>').trim()
